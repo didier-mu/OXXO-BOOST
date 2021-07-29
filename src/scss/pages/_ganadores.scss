@@ -1,0 +1,91 @@
+.ganadores{
+    .hero{
+        .col-12{
+            min-height: 450px;
+        }
+    }
+
+    .cajaGanadores{
+        margin-bottom: 40px;
+
+        ul{
+            list-style: none;
+            padding: 40px 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            margin-bottom: 50px;
+
+            li{
+                font-size: var(--h2);
+                color: #fff;
+                margin-bottom: 30px;
+                text-align: center;
+                font-family: var(--primariaBold);
+
+                &:last-child{
+                    margin: 0;
+                }
+            }
+        }
+
+        
+    }
+    
+}
+
+.legales{
+    padding: 60px 0 0;
+    
+    h2{
+        text-align: center;
+    }
+    
+    p, li, a{
+        color: #fff;
+    }
+
+    ol{
+        padding: 0 15px;
+    }
+
+    .botonera{
+        margin: 30px auto;
+    }
+}
+
+/// PORTRAIT
+@media (max-width:992px) {
+    .ganadores{
+        .hero{
+            margin-bottom: calc(35px + 140 * ((100vw - 768px) / 1280));
+    
+            .col-12{
+                min-height: calc(410px + 140 * ((100vw - 768px) / 1280));
+            }
+        }
+    }
+   
+}
+
+/// MOBILE
+@media (max-width:767px) {
+    .ganadores{
+        .hero{
+            margin-bottom: calc(35px + 40 * ((100vw - 320px) / 768));
+    
+            .col-12{
+                min-height: calc(250px + 150 * ((100vw - 320px) / 768));
+            }
+        }
+
+        .cajaGanadores{
+            margin-bottom: 40px;
+    
+            ul{
+                padding: 25px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,135 @@
+.registro{
+
+    h2{
+        margin-top: 10px;
+    }
+
+    
+    &--form{
+        z-index: 1;
+
+        form{
+            margin-top: 50px;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            align-self: baseline;
+            position: relative;
+            z-index: 1;
+    
+            .form__input{
+                flex: 0 0 48%;
+                margin-bottom: 10px;
+                
+                &.inputSmall{
+                    flex: 0 0 32%;
+                    width: 32%;
+                }
+                
+                &.inputLarge{
+                    flex: 0 0 65%;
+                }
+                
+            }
+            
+            .checkboxes{
+                margin-top: 30px;
+                flex: 0 0 50%;
+                align-items: flex-start;
+            }
+    
+            #cajaLegal{
+                .error-input{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    &--imagen{
+        min-height: 620px;
+        position: relative;
+        
+        img{
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+/// FULL
+@media (min-width:1440px) {
+    .registro{
+        .container-fluid{
+            max-width: 1280px;
+        }
+    }
+}
+
+
+/// PORTRAIT
+@media (max-width:992px) {
+    .registro{
+        &--form{
+            order: 2;
+            
+            h2, h4{
+                text-align: center;
+            }
+
+            h2{
+                font-size: var(--h1);
+                width: 93%;
+                margin: 10px auto;
+            }
+
+
+            form{
+                margin-top:  calc(35px + 50 * ((100vw - 30px) / 768));
+                
+                .form__input{
+                    flex: auto !important;
+                    width: auto !important;
+                }
+                
+                .checkboxes{
+                    flex: auto;
+                }
+                
+                #btnEnviar{
+                    width: 100%;
+                    margin: 20px auto;
+                }
+            }
+        }
+
+        &--imagen{
+            min-height: auto;
+            order: 1;
+            
+            img{
+                position: relative;
+                right: auto;
+                width: 100%;
+            }
+        }
+
+        
+    }
+    
+}
+
+/// MOBILE
+@media (max-width:767px) {
+    .registro{
+        &--form{
+            form{
+                .form__input{
+                    flex: auto !important;
+                    width: auto !important;
+                }
+            }
+        }
+    }
+}

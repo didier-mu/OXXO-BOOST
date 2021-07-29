@@ -1,0 +1,22 @@
+
+doctype
+html(lang='es')
+	include includes/head.pug
+	
+	body
+		main.home
+			section.hero
+				.container 
+					.row.justify-content-center
+						.col-12.col-lg-10.d-flex.justify-content-center
+							img(src="https://oxxo-com.s3.amazonaws.com/media-library/e1c88c161bb5b1f5f40f5cba1e59d5cf.png", alt="OXXO")
+
+							.hero--copy
+								h1 Compra en tiendas OXXO, registra tus tickets de compra 
+									br  
+									| y participa para 
+									b ganar un frigo de BOOST
+
+			include includes/cajaSesion.pug
+		
+			include includes/footer.pug

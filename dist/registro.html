@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="preload" href="css/styles.min.css" as="style">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>OXXO </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script src="js/jquery-3.4.1.min.js"> </script>
+    <script src="js/bootstrap.min.js"> </script>
+    <script src="js/modernizr.js"> </script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/functionsRegistro.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <main class="registro">
+      <section>
+        <div class="container-fluid"> 
+          <div class="row align-items-center">
+            <div class="col-lg-6 registro--form"> 
+              <h4>Llena el formulario con los datos de tu ticket de compra y si eres de las personas que registren la mayor cantidad de piezas de BOOST* podrás ganar</h4>
+              <h2 class="text-uppercase"> <b>uno de los 5 frigo de BOOST</b></h2>
+              <form class="d-flex">
+                <div class="form__input inputLarge">
+                  <label>Tienda</label>
+                  <input id="tienda" type="text" name="">
+                </div>
+                <div class="form__input inputSmall">
+                  <label>Fecha de compra (DD/MM/AAAA)</label>
+                  <input id="fecha" type="date" name="" max="2003-01-01">
+                </div>
+                <div class="form__input">
+                  <label>Folio</label>
+                  <input id="folio" type="text" name="">
+                </div>
+                <div class="form__input">
+                  <label>ID</label>
+                  <input id="id" type="text" name="">
+                </div>
+                <div class="checkboxes" id="cajaLegal"> 
+                  <div class="check">
+                    <input class="checkbox" id="checkLegale" type="checkbox">
+                    <label class="checkmark" id="checkboxLegales" for="checkLegale"> </label>
+                    <label class="label" id="labelLegales" for="checkLegale">Acepto <a id="linkTerminos" href="terminos-y-condiciones.php">Términos y Condiciones</a></label>
+                  </div>
+                  <h6 class="error-input">Debes aceptar los Términos y Condiciones</h6>
+                </div>
+                <input class="boton primario" id="btnEnviar" type="submit" value="Enviar">
+              </form>
+            </div>
+            <div class="col-lg-6 registro--imagen"><img src="https://oxxo-com.s3.amazonaws.com/media-library/1276033c661a68bfd4c5f58765c2ede3.png" alt="OXXO"></div>
+          </div>
+        </div>
+      </section>
+      <footer class="footerOxxo">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 d-flex flex-column align-items-center">
+              <h6> <b>COME BIEN</b></h6>
+              <h6>Esta promoción es válida para compras de b:oost 470 ml Energy o Zero en tiendas OXXO a Nivel Nacional. <br>Vigencia del 19 de agosto al 8 de septiembre de 2021.</h6>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

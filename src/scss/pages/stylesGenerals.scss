@@ -1,0 +1,43 @@
+
+/// TEXTOS
+
+main{
+    font-family: var(--primariaRegular);
+    overflow-x: hidden !important;
+    position: relative;
+    background: url('https://oxxo-com.s3.amazonaws.com/media-library/d45bfbe69bc350cf17cc3996128684c0.png') no-repeat center 100px / cover var(--primario);
+
+    h1{
+        font-size: var(--h1);
+    }
+    h2{
+        font-size: var(--h2);
+    }
+    h3{
+        font-size: var(--h3);
+    }
+    h4{
+        font-size: var(--h4);
+    }
+    h5{
+        font-size: var(--h5);
+    }
+    h6{
+        font-size: var(--h6);
+    }
+
+
+    h1,h2,h3,h4,h5,h6{
+        line-height: 1.3;
+        margin-bottom: 0;
+        text-transform: none;
+        font-weight: normal;
+        color: #fff;
+        
+        b{
+            font-family: var(--primariaBold);
+        }
+    }
+
+}
+

@@ -1,0 +1,197 @@
+@mixin checkbox {
+
+    display: flex; 
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 15px;
+    flex-flow: column;
+    width: 100%;
+
+    .check{
+        align-items: center;
+        display: flex;
+    }
+
+    input{
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+            background-color: #fff;
+        }
+
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+    
+    .label{
+        color: #fff;
+        font-size: var(--h6);
+        margin: 0;
+        
+        a{
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+    
+    .checkmark{
+        height: 20px;
+        width: 20px;
+        border-radius: 2px;
+        background: #fff;
+        margin:0 10px 0 0;
+        position: relative;
+        
+
+        &:after{
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 6px;
+            height: 10px;
+            border: solid ;;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    
+    .error-input{
+        flex: 0 0 100%;
+        display: none;
+    }
+    
+    @media (max-width:992px) {
+        .label{
+            font-size: var(--h5);
+        }
+        
+        .msjError{
+            text-align: center;
+            font-size: var(--h6);
+        }
+    }
+
+}
+
+@mixin boton{
+    appearance: none;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    padding: 0 30px;
+    height: calc(35px + 10 * ((100vw - 1280px) / 1920));
+    width: max-content;
+    font-size: var(--h5);
+    font-family: var(--primariaBold);
+    transition: .3s ease-in-out all;
+    
+
+    &:disabled{
+        color: #ccc;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        background: #fff;
+    }
+
+    &.primario{
+        color: #fff;
+        background: var(--secundario);
+        
+        &:hover{
+            background: #fff;
+            color: var(--secundario);
+        }
+    }
+    
+    &.secundario{
+        border: 2px solid var(--secundario);
+        background: transparent;
+        color: #fff;
+        
+        &:hover{
+            background: #fff;
+            color: var(--secundario);
+        }
+    }
+    
+    &.tercero{
+        background: var(--tercero);
+        color: var(--negro);
+    }
+    
+    @media (max-width:992px) {
+        font-size: var(--h3);
+        height: calc(40px + 10 * ((100vw - 320px) / 1280));
+    }
+}
+
+@mixin input{
+    position: relative;
+    width: 100%;
+
+    label{
+        font-size: var(--h6);
+        margin-bottom: 5px;
+        z-index: 0;
+        color: #fff;
+        font-family: var(--primariaBold);
+        text-transform: uppercase;
+        transition: .3s ease-in-out all;
+    }
+
+    input[type=text], input[type=date]{
+        appearance: none;
+        outline: none;
+        opacity: 1;
+        height: 30px;
+        font-size: 18px;
+        color: var(--negro);
+        border: none;
+        padding: 0 15px;
+        width: 100%;
+        transition: .3s ease-in-out all;
+        
+        &:focus{
+            border: 1px solid var(--tercero);
+        }
+        
+        &::placeholder{
+            color: var(--gris);
+        }
+    }
+    
+    input[type=date]{
+        cursor: pointer;
+        padding: 0 0 0 5px;
+    }
+    
+    .error-input{
+        display: block;
+        flex: 0 0 100%;
+    }
+    
+    @media (max-width:992px) {
+        margin-bottom: 15px;
+        
+        label{
+            font-size: var(--h6);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.gracias{
+    .hero{
+        .col-12{
+            min-height: 570px;
+        }
+        
+        .botonera{
+            margin-top: 40px;
+        }
+    }
+    
+}
+
+/// PORTRAIT
+@media (max-width:992px) {
+    .gracias{
+        .hero{
+            margin-bottom: calc(35px + 140 * ((100vw - 768px) / 1280));
+    
+            .col-12{
+                min-height: calc(600px + 140 * ((100vw - 768px) / 1280));
+            }
+        }
+    }
+   
+}
+
+/// MOBILE
+@media (max-width:767px) {
+    .gracias{
+        .hero{
+            margin-bottom: calc(35px + 40 * ((100vw - 320px) / 768));
+    
+            .col-12{
+                min-height: calc(500px + 150 * ((100vw - 320px) / 768));
+            }
+        }
+    }
+    
+}

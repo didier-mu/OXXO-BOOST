@@ -1,0 +1,63 @@
+.home{
+    .hero{
+        h1{
+            align-self: flex-end;
+            font-size: var(--h2);
+        }
+    }
+}
+
+.hero{
+    margin-bottom: 50px;
+    
+    .col-12{
+        min-height: 440px;
+    }
+    
+    &--copy{
+        align-self: flex-end;
+        z-index: 1;
+    }
+
+    img{
+        position: absolute;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        text-align: center;
+    }
+}
+
+/// PORTRAIT
+@media (max-width:992px) {
+    .hero{
+        margin-bottom: calc(35px + 140 * ((100vw - 768px) / 1280));
+
+        .col-12{
+            min-height: calc(400px + 140 * ((100vw - 768px) / 1280));
+        }
+    }
+}
+
+/// MOBILE
+@media (max-width:767px) {
+    .hero{
+        margin-bottom: calc(35px + 40 * ((100vw - 320px) / 768));
+
+        .col-12{
+            min-height: calc(270px + 150 * ((100vw - 320px) / 768));
+        }
+
+        img{
+            width: 100%;
+        }
+
+        h1 br{
+            display: none;
+        }
+    }
+}

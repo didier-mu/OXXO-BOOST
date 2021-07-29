@@ -1,0 +1,51 @@
+doctype
+html(lang='es')
+    include includes/head.pug
+
+    body
+        main.registro
+            section
+                .container-fluid 
+                    .row.align-items-center
+                        .col-lg-6.registro--form 
+                            h4 Llena el formulario con los datos de tu ticket de compra y si eres de las personas que registren la mayor cantidad de piezas de BOOST* podrás ganar
+                            
+                            h2.text-uppercase 
+                                b uno de los 5 frigo de BOOST
+
+                            form.d-flex
+
+                                .form__input.inputLarge
+                                    label Tienda
+                                    input#tienda(type='text' name='') 
+                               
+                                .form__input.inputSmall
+                                    label Fecha de compra (DD/MM/AAAA)
+                                    input#fecha(type='date' name='', max="2003-01-01") 
+                                
+                                .form__input
+                                    label Folio
+                                    input#folio(type='text' name='') 
+                                
+                                
+                                .form__input
+                                    label ID
+                                    input#id(type='text' name='') 
+                                
+                                .checkboxes#cajaLegal 
+                                    .check
+                                        input#checkLegale.checkbox(type='checkbox')
+                                        label#checkboxLegales.checkmark(for='checkLegale')  
+                                        label.label#labelLegales(for='checkLegale')
+                                            | Acepto 
+                                            a#linkTerminos(href="terminos-y-condiciones.php") Términos y Condiciones
+                                    
+                                    h6.error-input Debes aceptar los Términos y Condiciones
+                                
+                                input.boton.primario(id="btnEnviar" type="submit" value="Enviar")
+            
+                        .col-lg-6.registro--imagen
+                            img(src="https://oxxo-com.s3.amazonaws.com/media-library/1276033c661a68bfd4c5f58765c2ede3.png", alt="OXXO")
+                            
+
+            include includes/footer.pug

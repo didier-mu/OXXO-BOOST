@@ -1,0 +1,39 @@
+main{
+    .checkboxes{
+        @include checkbox;
+    }
+
+    .boton{
+        @include boton;
+    }
+    
+    .form__input{
+        @include input;
+    }
+
+    .error-input{
+        color: #01d0fc;
+        font-size: var(--h6);
+        margin-top: 5px;
+    }
+
+    .botonera{
+        .boton{
+            min-width: 200px;
+            margin: 0 15px;
+        }
+        
+        @media (max-width:992px) {
+            flex-direction: column;
+            
+            a{
+                width: 100%;
+            }
+            
+            .boton{
+                margin: 0 auto 20px;
+                width: 100%;
+            }
+        }
+    }
+}
